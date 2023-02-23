@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const user = {
-    name: "Anni kumari",
-    profilePic: "https://via.placeholder.com/150",
+    name: "Elon Musk",
+    profilePic: "images/MicrosoftTeams-image (23).png",
     userClass: "Class 5th   ",
   };
 

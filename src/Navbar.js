@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import Popup from './Popup';
 
 function Navbar1(props) {
   const { name, profilePic, userClass } = props;
   return (
-    <Navbar bg="#464EB8" expand="lg" style={{ backgroundColor: '#464eb8', borderBottom: '2px solid #ccc', padding: '10px 0', width: "100%" }}>
+    <Navbar expand="lg" style={{ backgroundColor: '#444791', borderBottom: '2px solid #ccc', padding: '10px 0', width: "100%" }}>
       <Navbar.Brand href="#" style={{ color: '#fff', fontWeight: 'bold', paddingLeft:"20px" }}>SenseiAI</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -31,7 +31,7 @@ function Navbar1(props) {
           <Navbar.Text style={{ fontWeight: 'bold', color:"#fff" }}>{name}</Navbar.Text>
           
           <Navbar.Text style={{ fontWeight: 'bold', color:"#fff" }}>&nbsp;&nbsp;&nbsp;{userClass} &nbsp;&nbsp;&nbsp;  </Navbar.Text>
-          <Popup/>
+          <Popup />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

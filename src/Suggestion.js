@@ -4,26 +4,26 @@ const cardData = [
   {
     id: 1,
     title: "Solid States",
-    description: "Solid-state in Chemistry is the study ",
+    description: "Solid-state in Chemistry is the study of.....read more",
     imageUrl: "images/solid states.jfif",
   },
   {
     id: 2,
     title: "Artificial Intelligence",
     description:
-      "Artificial general intelligence (AGI), or general AI………read more",
-    imageUrl: "/images/artificial inteligence.jfif",
+      "Artificial general intelligence (AGI), or general.....read more",
+    imageUrl: "/images/ai.jfif",
   },
   {
     id: 3,
     title: "Probability",
-    description: "Probability means possibility. It is a branch of………read more",
+    description: "Probability means possibility. It is a branch of.....read more",
     imageUrl: "/images/pro.jfif",
   },
   {
     id: 4,
     title: "Laws of Motions",
-    description: "Newton’s laws of motion imply the relationship………read more",
+    description: "Newton’s laws of motion imply that the.....read more",
     imageUrl: "/images/newton.jfif",
   },
 ];

@@ -2,31 +2,106 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button } from "react-bootstrap";
 
-class Survey extends React.Component {
+import { Component } from 'react';
+
+class MultipleChoiceQuestion extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showPopUp: false,
+      answer: ''
     };
+    this.handleAnswerChange = this.handleAnswerChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleAnswerChange(event) {
+    this.setState({ answer: event.target.value });
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    // do something with the selected answer
+    console.log(this.state.answer);
   }
 
   render() {
     return (
       <div>
+       <button
+          onClick={() => this.setState({ showPopUp: true })}
+        >
+          Take Survey
+        </button>
+        {this.state.showPopUp ? (
+          <Form onSubmit={this.handleSubmit}>
+        <Form.Group controlId="formBasicQuestion">
+          <Form.Label>What is the capital of France?</Form.Label>
+          <Form.Check
+            type="radio"
+            name="answer"
+            label="Paris"
+            value="Paris"
+            checked={this.state.answer === "Paris"}
+            onChange={this.handleAnswerChange}
+          />
+          <Form.Check
+            type="radio"
+            name="answer"
+            label="Berlin"
+            value="Berlin"
+            checked={this.state.answer === "Berlin"}
+            onChange={this.handleAnswerChange}
+          />
+          <Form.Check
+            type="radio"
+            name="answer"
+            label="Madrid"
+            value="Madrid"
+            checked={this.state.answer === "Madrid"}
+            onChange={this.handleAnswerChange}
+          />
+        </Form.Group>
+        <button type="submit">Submit</button>
+      </Form>
+      ) : null}
+      </div>
+    );
+  }
+}
+
+class Survey extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPopUp: false,
+      answer: ''
+    };
+    this.handleAnswerChange = this.handleAnswerChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleAnswerChange(event) {
+    this.setState({ answer: event.target.value });
+    console.log(this.state.answer+ "anni")
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    // do something with the selected answer
+    console.log(this.state.answer);
+  }
+  render() {
+    return (
+      <div>
         <button
-        //   className="btn btn-secondary"
           onClick={() => this.setState({ showPopUp: true })}
         >
           Take Survey
         </button>
         {this.state.showPopUp ? (
           <div className="survey-form-pop-up">
-            <form>
               <div
                 className="d-flex justify-content-center "
                 style={{ height: "200vh" }}
               >
-                <Form margin="auto">
                   <h3 className="d-flex justify-content-center">
                     Answer the most relevant one according to you
                   </h3>
@@ -42,12 +117,18 @@ class Survey extends React.Component {
                         name="q1"
                         id="q1-a"
                         label="Strongly Disagree"
+                        value="Paris"
+                        checked={this.state.answer === "Paris"}
+                        onChange={this.handleAnswerChange}
                       />
                       <Form.Check
                         inline
                         type="radio"
                         name="q1"
                         id="q1-b"
+                        value="Paris"
+            checked={this.state.answer === "Paris"}
+            onChange={this.handleAnswerChange}
                         label="Disagree"
                       />
                       <Form.Check
@@ -55,12 +136,18 @@ class Survey extends React.Component {
                         type="radio"
                         name="q1"
                         id="q1-c"
+                        value="Paris"
+            checked={this.state.answer === "Paris"}
+            onChange={this.handleAnswerChange}
                         label="Neutral"
                       />
                       <Form.Check
                         inline
                         type="radio"
                         name="q1"
+                        value="Paris"
+                        checked={this.state.answer === "Paris"}
+                        onChange={this.handleAnswerChange}
                         id="q1-d"
                         label="Agree"
                       />
@@ -68,6 +155,9 @@ class Survey extends React.Component {
                         inline
                         type="radio"
                         name="q1"
+                        value="Paris"
+                        checked={this.state.answer === "Paris"}
+                        onChange={this.handleAnswerChange}
                         id="q1-d"
                         label="Strongly Agree"
                       />
@@ -678,10 +768,9 @@ class Survey extends React.Component {
                 Close
                   </Button>
                   {/* Add the rest of the questions here */}
-                </Form>
+                {/* </Form> */}
               </div>
              
-            </form>
           </div>
         ) : null}
       </div>
@@ -689,4 +778,4 @@ class Survey extends React.Component {
   }
 }
 
-export default Survey;
+export default MultipleChoiceQuestion;
