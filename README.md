@@ -26,6 +26,20 @@ To install Sensei-AI, follow these steps:
 
 Clone the repository: git clone https://github.com/shivamkapoor-msft/Sensei-AI.git
 
+### Installing and Running the Node.js Files
+The Sensei-AI project also includes some Node.js files that you can use to interact with the API and perform various tasks.
+Here's how to install and run the Node.js files:
+
+Make sure you have Node.js installed on your system. You can download it from the official Node.js website: https://nodejs.org/
+
+Navigate to the main folder in the project directory.
+
+Run npm install to install the necessary dependencies.
+
+Start the server by running npm start. This will start the API server on http://localhost:3000.
+
+Run your python model as well 
+
 ## Contributing
 
 We welcome contributions from the community! If you would like to contribute to Sensei-AI, please follow these steps:
