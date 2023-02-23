@@ -26,3 +26,10 @@ To install Sensei-AI, follow these steps:
 
 Clone the repository: git clone https://github.com/shivamkapoor-msft/Sensei-AI.git
 
+## Contributing
+
+We welcome contributions from the community! If you would like to contribute to Sensei-AI, please follow these steps:
+
+Fork the repository
+Make your changes
+Submit a pull request
